@@ -2,6 +2,7 @@ import boto3
 import json
 
 #  Map impacted entity names to EC2 instance IDss TEST CommandiTESTok Another Test 02042025
+# new comment
 INSTANCE_MAPPING = {
     "mt-test-win2016": "i-0cca2e61e3dac33fb",
     "mt-test-win01": "i-0971f52241345333b",
