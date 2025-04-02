@@ -24,12 +24,13 @@ jobs:
 
       - name: Zip Lambda function
         run: zip lambda.zip lambda.py
-
+      
       - name: Calculate SHA256 hash of lambda.zip
-        id: hash
         run: |
-          HASH=$(sha256sum lambda.zip | awk '{ print $1 }')
-          echo "source_code_hash=$HASH" >> $GITHUB_OUTPUT
+         HASH=$(sha256sum lambda.zip | awk '{ print $1 }')
+         echo "SHA256 hash (base64):"
+         echo "$HASH" | xxd -r -p | base64
+
 
       - name: Upload Lambda zip to S3
         run: aws s3 cp lambda.zip s3://mt-s3-lon/mt-lambda/lambda.zip
