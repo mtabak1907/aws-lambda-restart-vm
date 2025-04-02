@@ -6,6 +6,7 @@ import json
 # new comment
 #new line added33
 #new line added 44
+#new line added 55
 INSTANCE_MAPPING = {
     "mt-test-win2016": "i-0cca2e61e3dac33fb",
     "mt-test-win01": "i-0971f52241345333b",
